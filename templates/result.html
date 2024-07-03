@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>相似图片结果</title>
+</head>
+<body>
+    <h1>相似图片结果</h1>
+    {% for image in images %}
+        <div>
+            <img src="{{ url_for('clipped_file', filename=image) }}" alt="{{ image }}" style="width:200px;">
+        </div>
+    {% endfor %}
+    <br>
+    <a href="/">再上传一张图片</a>
+</body>
+</html>
